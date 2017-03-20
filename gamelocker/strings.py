@@ -22,6 +22,7 @@ class VaingloryStrings(object):
         "*Flicker*": "Flicker",
         "*Fortress*": "Fortress",
         "*Glaive*": "Glaive",
+        "*Grumpjaw*": "Grumpjaw",
         "*Gwen*": "Gwen",
         "*Hero009*": "Krul",
         "*Hero010*": "Skaarf",
@@ -67,7 +68,7 @@ class VaingloryStrings(object):
         "Crystal1": "Crystal Bit",
         "Crystal2": "Eclipse Prism",
         "Crystal3": "Shatterglass",
-        "Crystal Matrix": "Alternating Current",
+        "Crystal Matrix": "Aegis",
         "Echo": "Echo",
         "EveOfHarvest": "Eve of Harvest",
         "Flare": "Flare",
@@ -179,6 +180,23 @@ class VaingloryStrings(object):
         "*1097_Item_Echo*": "Echo",
         "*1105_Item_SlumberingHusk*": "Slumbering Husk"
     }
+    
+    neutrals = {
+    "*JungleMinion_GoldMiner*": "Gold Miner",
+    "*JungleMinion_CrystalMiner*" : "Crystal Miner",
+    "*Neutral_JungleMinion_DefaultBig*": "Back Minion",    
+    "*Neutral_JungleMinion_DefaultSmall*": "Shop Minion",
+    "*JungleMinion_TreeEnt*": " Tree Ent",
+    "*LeadMinion*": "Lane Lead Minion",
+    "*TankMinion*": "Lane Tank Minion",
+    "*RangedMinion*" : "Lane Ranged Minion",
+    "*Kraken_Captured*": "Captured Kraken",
+    "*Kraken_Jungle*" : "Released Kraken",
+    "*Turret*" : "Turret",
+    "*VainTurret*" : "Vain Turret",
+    "*VainCrystalAway*": "Vain Crystal",
+    "*FortressMinion*" : "Fortress Wolf"
+    }
 
 
 def pretty(string):
@@ -189,4 +207,6 @@ def pretty(string):
         return VaingloryStrings.items[string]
     if string in VaingloryStrings.item_ids:
         return VaingloryStrings.item_ids[string]
+    if string in VaingloryStrings.neutrals:
+        return VaingloryStrings.neutrals[string]
     return string
